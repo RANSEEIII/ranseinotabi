@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campfire Journal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<audio id="bg-sound" loop>
+  <source src="fire.mp3" type="audio/mpeg" />
+</audio>
+
+<body>
+  <!-- Background -->
+  <img id="background" src="campfire.gif" alt="Campfire" />
+
+  <!-- Journal (closed) -->
+  <img id="journal" src="journal.png" alt="Journal" />
+
+  <!-- Opened Journal Area -->
+  <div id="journal-container" style="display: none;">
+    <img id="journal-page" src="journal_open.png" alt="Journal Page" />
+    <div id="nav-left"></div>
+    <div id="nav-right"></div>
+  </div>
+
+  <!-- Flip Sound -->
+  <audio id="flip-sound" src="flip.mp3"></audio>
+
+  <!-- Script -->
+ <script>
+  const journal = document.getElementById('journal');
+  const container = document.getElementById('journal-container');
+  const pageImg = document.getElementById('journal-page');
+  const flipSound = document.getElementById('flip-sound');
+  const bgSound = document.getElementById('bg-sound');
+
+  const pages = ['journal_open.png', 'journal_1.png'];
+  let currentPage = 0;
+
+  journal.addEventListener('click', () => {
+    journal.style.display = 'none';
+    container.style.display = 'block';
+    pageImg.src = pages[currentPage];
+
+    if (bgSound.paused) {
+      bgSound.play().catch(e => console.warn('Autoplay blocked:', e));
+    }
+  });
+
+  function flipToPage(index) {
+    if (index >= 0 && index < pages.length) {
+      currentPage = index;
+      pageImg.src = pages[currentPage];
+      flipSound.play();
+    }
+  }
+
+  document.getElementById('nav-left').addEventListener('click', () => {
+    if (currentPage > 0) {
+      flipToPage(currentPage - 1);
+    }
+  });
+
+  document.getElementById('nav-right').addEventListener('click', () => {
+    if (currentPage < pages.length - 1) {
+      flipToPage(currentPage + 1);
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (
+      container.style.display === 'block' &&
+      !container.contains(e.target) &&
+      e.target !== journal
+    ) {
+      container.style.display = 'none';
+      journal.style.display = 'block';
+      currentPage = 0;
+      pageImg.src = pages[currentPage];
+    }
+  });
+</script>
+</body>
+</html>

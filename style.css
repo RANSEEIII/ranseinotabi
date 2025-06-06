@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background-color: black;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#journal {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+#journal-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  max-width: 100%;
+  z-index: 3;
+}
+
+#journal-page {
+  width: 100%;
+  display: block;
+}
+
+
+#nav-left, #nav-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#nav-left {
+  left: 0;
+}
+
+#nav-right {
+  right: 0;
+}
