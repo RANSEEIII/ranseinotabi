@@ -35,6 +35,12 @@ html, body {
   z-index: 3;
 }
 
+#page-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 #journal-page {
   width: 100%;
   display: block;
@@ -42,12 +48,12 @@ html, body {
 
 #polaroid-link {
   position: absolute;
-  top: 30%; /* adjust as needed */
-  left: 63%; /* adjust as needed */
-  width: 120px;  /* size of clickable area */
+  top: 30%;
+  left: 63%; 
+  width: 120px;
   height: 140px;
   z-index: 6;
-  display: none; /* shown only when journal_1.png is active */
+  display: none;
 }
 
 #nav-left, #nav-right {
