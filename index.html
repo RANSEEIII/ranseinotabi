@@ -17,12 +17,15 @@
   <!-- Journal (closed) -->
   <img id="journal" src="journal.png" alt="Journal" />
 
-  <!-- Opened Journal Area -->
-  <div id="journal-container" style="display: none;">
-    <img id="journal-page" src="journal_open.png" alt="Journal Page" />
-    <div id="nav-left"></div>
-    <div id="nav-right"></div>
-  </div>
+<div id="journal-container" style="display: none;">
+  <img id="journal-page" src="journal_open.png" alt="Journal Page" />
+
+  <!-- Polaroid hotspot -->
+  <a id="polaroid-link" href="https://www.youtube.com/watch?v=2H9-vOcsG9o&list=LL" target="_blank"></a>
+
+  <div id="nav-left"></div>
+  <div id="nav-right"></div>
+</div>
 
   <!-- Flip Sound -->
   <audio id="flip-sound" src="flip.mp3"></audio>
@@ -48,13 +51,22 @@
     }
   });
 
-  function flipToPage(index) {
-    if (index >= 0 && index < pages.length) {
-      currentPage = index;
-      pageImg.src = pages[currentPage];
-      flipSound.play();
+function flipToPage(index) {
+  if (index >= 0 && index < pages.length) {
+    currentPage = index;
+    pageImg.src = pages[currentPage];
+    flipSound.play();
+
+    // Show the polaroid link only on journal_1.png
+    const polaroidLink = document.getElementById('polaroid-link');
+    if (currentPage === 1) {
+      polaroidLink.style.display = 'block';
+    } else {
+      polaroidLink.style.display = 'none';
     }
   }
+}
+
 
   document.getElementById('nav-left').addEventListener('click', () => {
     if (currentPage > 0) {
