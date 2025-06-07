@@ -42,15 +42,13 @@ html, body {
 
 #polaroid-link {
   position: absolute;
-  top: 58%;       /* line up vertically */
-  left: 70%;      /* line up horizontally */
-  width: 140px;   /* polaroid width */
-  height: 140px;  /* polaroid height */
+  top: 30%; /* adjust as needed */
+  left: 63%; /* adjust as needed */
+  width: 120px;  /* size of clickable area */
+  height: 140px;
   z-index: 6;
-  display: none;
+  display: none; /* shown only when journal_1.png is active */
 }
-
-
 
 #nav-left, #nav-right {
   position: absolute;
