@@ -40,6 +40,17 @@ html, body {
   display: block;
 }
 
+#polaroid-link {
+  position: absolute;
+  top: 58%;       /* line up vertically */
+  left: 70%;      /* line up horizontally */
+  width: 140px;   /* polaroid width */
+  height: 140px;  /* polaroid height */
+  z-index: 6;
+  display: none;
+}
+
+
 
 #nav-left, #nav-right {
   position: absolute;
