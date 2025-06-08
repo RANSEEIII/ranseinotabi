@@ -20,8 +20,10 @@
 <div id="journal-container" style="display: none;">
   <div id="page-wrapper">
     <img id="journal-page" src="journal_open.png" alt="Journal Page" />
-    <!-- Polaroid hotspot -->
-    <a id="polaroid-link" href="https://www.youtube.com/watch?v=xkShPFS5zC4" target="_blank"></a>
+   <!-- Polaroid hotspot for journal_1.png -->
+<a id="polaroid-link-1" href="https://www.youtube.com/watch?v=xkShPFS5zC4" target="_blank"></a>
+<!-- Hotspot for journal_2.png -->
+<a id="polaroid-link-2" href="https://www.youtube.com/watch?v=Goq6xNC-o5c" target="_blank"></a>
   </div>
   <div id="nav-left"></div>
   <div id="nav-right"></div>
@@ -32,14 +34,14 @@
   <audio id="flip-sound" src="flip.mp3"></audio>
 
   <!-- Script -->
- <script>
+<script>
   const journal = document.getElementById('journal');
   const container = document.getElementById('journal-container');
   const pageImg = document.getElementById('journal-page');
   const flipSound = document.getElementById('flip-sound');
   const bgSound = document.getElementById('bg-sound');
 
-  const pages = ['journal_open.png', 'journal_1.png'];
+  const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png'];
   let currentPage = 0;
 
   journal.addEventListener('click', () => {
@@ -52,20 +54,22 @@
     }
   });
 
-function flipToPage(index) {
-  if (index >= 0 && index < pages.length) {
-    currentPage = index;
-    pageImg.src = pages[currentPage];
-    flipSound.play();
+  function flipToPage(index) {
+    if (index >= 0 && index < pages.length) {
+      currentPage = index;
+      pageImg.src = pages[currentPage];
+      flipSound.play();
 
-    // Show the polaroid link only on journal_1.png
-    const polaroidLink = document.getElementById('polaroid-link');
-    if (currentPage === 1) {
-      polaroidLink.style.display = 'block';
-    } else {
-      polaroidLink.style.display = 'none';
-    }
-  }
+const link1 = document.getElementById('polaroid-link-1');
+const link2 = document.getElementById('polaroid-link-2');
+
+link1.style.display = 'none';
+link2.style.display = 'none';
+
+if (pages[currentPage] === 'journal_1.png') {
+  link1.style.display = 'block';
+} else if (pages[currentPage] === 'journal_2.png') {
+  link2.style.display = 'block';
 }
 
 
@@ -94,5 +98,6 @@ function flipToPage(index) {
     }
   });
 </script>
+
 </body>
 </html>
