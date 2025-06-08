@@ -48,24 +48,23 @@ html, body {
   display: block;
 }
 
-#polaroid-link-1 {
+#polaroid-link-1,
+#polaroid-link-2 {
   position: absolute;
-  top: 30%;
-  right: 12%;
   width: 15%;
   height: 25%;
   display: none;
   z-index: 4;
 }
 
+#polaroid-link-1 {
+  top: 30%;
+  right: 12%;
+}
+
 #polaroid-link-2 {
-  position: absolute;
-  top: 40%;
+  top: 35%;
   left: 15%;
-  width: 20%;
-  height: 30%;
-  display: none;
-  z-index: 4;
 }
 
 #nav-left, #nav-right {
