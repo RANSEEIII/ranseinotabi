@@ -54,7 +54,8 @@ html, body {
   width: 15%;
   height: 25%;
   display: none;
-  z-index: 4;
+  z-index: 6; /* Make sure it's on top */
+  pointer-events: auto; /* Allow clicks */
 }
 
 #polaroid-link-1 {
@@ -67,14 +68,17 @@ html, body {
   left: 15%;
 }
 
-#nav-left, #nav-right {
+#nav-left,
+#nav-right {
   position: absolute;
   top: 0;
   width: 50%;
   height: 100%;
-  z-index: 5;
   cursor: pointer;
+  z-index: 4;
+  pointer-events: auto; /* Keep clickable, but polaroids will sit above */
 }
+
 
 #nav-left {
   left: 0;
