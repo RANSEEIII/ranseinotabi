@@ -51,25 +51,27 @@
       }
     });
 
-    function flipToPage(index) {
-      if (index >= 0 && index < pages.length) {
-        currentPage = index;
-        pageImg.src = pages[currentPage];
-        flipSound.play();
+ function flipToPage(index) {
+  if (index >= 0 && index < pages.length) {
+    currentPage = index;
+    pageImg.src = pages[currentPage];
+    flipSound.play();
 
-        const link1 = document.getElementById('polaroid-link-1');
-        const link2 = document.getElementById('polaroid-link-2');
+    // Handle polaroid visibility
+    const link1 = document.getElementById('polaroid-link-1');
+    const link2 = document.getElementById('polaroid-link-2');
 
-        link1.style.display = 'none';
-        link2.style.display = 'none';
+    link1.style.display = 'none';
+    link2.style.display = 'none';
 
-        if (pages[currentPage] === 'journal_1.png') {
-          link1.style.display = 'block';
-        } else if (pages[currentPage] === 'journal_2.png') {
-          link2.style.display = 'block';
-        }
-      }
+    if (currentPage === 1) {
+      link1.style.display = 'block';
+    } else if (currentPage === 2) {
+      link2.style.display = 'block';
     }
+  }
+}
+
 
     document.getElementById('nav-left').addEventListener('click', () => {
       if (currentPage > 0) {
