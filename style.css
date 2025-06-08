@@ -51,21 +51,25 @@ html, body {
 #polaroid-link-1,
 #polaroid-link-2 {
   position: absolute;
-  width: 15%;
-  height: 25%;
   display: none;
-  z-index: 6; /* Make sure it's on top */
-  pointer-events: auto; /* Allow clicks */
+  z-index: 6;
+  pointer-events: auto;
 }
 
+/* Approximate position over the polaroid on journal_1.png */
 #polaroid-link-1 {
-  top: 30%;
-  right: 12%;
+  top: 20%;  /* adjust these to match where your polaroid is */
+  left: 65%;
+  width: 20%;
+  height: 30%;
 }
 
+/* Approximate position over the polaroid on journal_2.png */
 #polaroid-link-2 {
-  top: 35%;
-  left: 15%;
+  top: 20%;
+  left: 65%;
+  width: 20%;
+  height: 30%;
 }
 
 #nav-left,
