@@ -18,6 +18,7 @@
   <img id="journal-page" src="journal_open.png" alt="Journal Page" />
   <a id="polaroid-link-1" href="https://www.youtube.com/watch?v=xkShPFS5zC4" target="_blank"></a>
   <a id="polaroid-link-2" href="https://www.youtube.com/watch?v=Goq6xNC-o5c" target="_blank"></a>
+  <a id="polaroid-link-3" href="https://www.youtube.com/watch?v=i1gjhIWeZ2c" target="_blank"></a>
 </div>
     
     <div id="nav-left"></div>
@@ -38,7 +39,7 @@
     const flipSound = document.getElementById('flip-sound');
     const bgSound = document.getElementById('bg-sound');
 
-    const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png'];
+    const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png', 'journal_3.png'];
     let currentPage = 0;
 
     journal.addEventListener('click', () => {
@@ -60,6 +61,7 @@
     // Handle polaroid visibility
     const link1 = document.getElementById('polaroid-link-1');
     const link2 = document.getElementById('polaroid-link-2');
+    const link3 = document.getElementById('polaroid-link-3');
 
     link1.style.display = 'none';
     link2.style.display = 'none';
