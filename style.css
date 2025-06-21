@@ -49,13 +49,14 @@ html, body {
 }
 
 #polaroid-link-1,
-#polaroid-link-2 
-#polaroid-link-3{
+#polaroid-link-2,
+#polaroid-link-3 {
   position: absolute;
   display: none;
   z-index: 6;
   pointer-events: auto;
 }
+
 
 /* Approximate position over the polaroid on journal_1.png */
 #polaroid-link-1 {
