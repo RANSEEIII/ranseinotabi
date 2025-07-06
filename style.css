@@ -51,7 +51,8 @@ html, body {
 #polaroid-link-1,
 #polaroid-link-2,
 #polaroid-link-3,
-#polaroid-link-4 {
+#polaroid-link-4,
+#polaroid-link-5 {
   position: absolute;
   display: none;
   z-index: 6;
@@ -85,6 +86,14 @@ html, body {
 
 /* Approximate position over the polaroid on journal_4.png */
 #polaroid-link-4 {
+  top: 20%;
+  left: 65%;
+  width: 20%;
+  height: 30%;
+}
+
+/* Approximate position over the polaroid on journal_5.png */
+#polaroid-link-5 {
   top: 20%;
   left: 65%;
   width: 20%;
