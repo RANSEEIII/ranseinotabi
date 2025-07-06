@@ -20,6 +20,7 @@
   <a id="polaroid-link-2" href="https://www.youtube.com/watch?v=Goq6xNC-o5c" target="_blank"></a>
   <a id="polaroid-link-3" href="https://www.youtube.com/watch?v=i1gjhIWeZ2c" target="_blank"></a>
   <a id="polaroid-link-4" href="https://www.youtube.com/watch?v=u9P0BVvSElo" target="_blank"></a>
+  <a id="polaroid-link-5" href="" target="_blank"></a>
 </div>
     
     <div id="nav-left"></div>
@@ -40,7 +41,7 @@
     const flipSound = document.getElementById('flip-sound');
     const bgSound = document.getElementById('bg-sound');
 
-    const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png', 'journal_3.png', 'journal_4.png'];
+    const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png', 'journal_3.png', 'journal_4.png', 'journal_5.png'];
     let currentPage = 0;
 
     journal.addEventListener('click', () => {
@@ -64,11 +65,13 @@
     const link2 = document.getElementById('polaroid-link-2');
     const link3 = document.getElementById('polaroid-link-3');
     const link4 = document.getElementById('polaroid-link-4');
+    const link4 = document.getElementById('polaroid-link-5');
 
     link1.style.display = 'none';
     link2.style.display = 'none';
     link3.style.display = 'none';
     link4.style.display = 'none';
+    link5.style.display = 'none';
 
     if (currentPage === 1) {
   link1.style.display = 'block';
@@ -78,9 +81,11 @@
   link3.style.display = 'block'; // <- This makes it appear!
 } else if (currentPage === 4) {
   link4.style.display = 'block'; // <- This makes it appear!
-}
+} else if (currentPage === 5) {
+  link4.style.display = 'block'; // <- This makes it appear!   
   }
 }
+ }
 
 
     document.getElementById('nav-left').addEventListener('click', () => {
