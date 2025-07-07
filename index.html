@@ -54,35 +54,36 @@
       }
     });
 
- function flipToPage(index) {
+function flipToPage(index) {
   if (index >= 0 && index < pages.length) {
     currentPage = index;
     pageImg.src = pages[currentPage];
     flipSound.play();
 
- // Handle polaroid visibility
-const link1 = document.getElementById('polaroid-link-1');
-const link2 = document.getElementById('polaroid-link-2');
-const link3 = document.getElementById('polaroid-link-3');
-const link4 = document.getElementById('polaroid-link-4');
-const link5 = document.getElementById('polaroid-link-5');
+    const link1 = document.getElementById('polaroid-link-1');
+    const link2 = document.getElementById('polaroid-link-2');
+    const link3 = document.getElementById('polaroid-link-3');
+    const link4 = document.getElementById('polaroid-link-4');
+    const link5 = document.getElementById('polaroid-link-5');
 
-link1.style.display = 'none';
-link2.style.display = 'none';
-link3.style.display = 'none';
-link4.style.display = 'none';
-link5.style.display = 'none';
+    link1.style.display = 'none';
+    link2.style.display = 'none';
+    link3.style.display = 'none';
+    link4.style.display = 'none';
+    link5.style.display = 'none';
 
-if (currentPage === 1) {
-  link1.style.display = 'block';
-} else if (currentPage === 2) {
-  link2.style.display = 'block';
-} else if (currentPage === 3) {
-  link3.style.display = 'block';
-} else if (currentPage === 4) {
-  link4.style.display = 'block';
-} else if (currentPage === 5) {
-  link5.style.display = 'block';
+    if (currentPage === 1) {
+      link1.style.display = 'block';
+    } else if (currentPage === 2) {
+      link2.style.display = 'block';
+    } else if (currentPage === 3) {
+      link3.style.display = 'block';
+    } else if (currentPage === 4) {
+      link4.style.display = 'block';
+    } else if (currentPage === 5) {
+      link5.style.display = 'block';
+    }
+  }
 }
 
 
