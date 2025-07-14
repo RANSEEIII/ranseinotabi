@@ -16,10 +16,10 @@ html, body {
 
 #tent-click-area {
     position: absolute;
-    top: 82%;   /* Moves it lower */
-    left: 88%;  /* Moves it further right */
-    width: 100px;  /* Wider area */
-    height: 200px; /* Taller area */
+    top: 80%;    /* Slightly higher */
+    left: 85%;   /* Move left */
+    width: 100px;  
+    height: 220px; /* Slightly taller */
     display: block;
     cursor: pointer;
     z-index: 5;
