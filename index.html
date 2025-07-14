@@ -105,17 +105,21 @@ function flipToPage(index) {
       }
     });
 
-    document.addEventListener('click', (e) => {
-      if (
-        container.style.display === 'block' &&
-        !container.contains(e.target) &&
-        e.target !== journal
-      ) {
-        container.style.display = 'none';
-        journal.style.display = 'block';
-        currentPage = 0;
-        pageImg.src = pages[currentPage];
-      }
+document.addEventListener('click', (e) => {
+  const tentArea = document.getElementById('tent-click-area');
+  if (
+    container.style.display === 'block' &&
+    !container.contains(e.target) &&
+    e.target !== journal &&
+    !tentArea.contains(e.target)
+  ) {
+    container.style.display = 'none';
+    journal.style.display = 'block';
+    currentPage = 0;
+    pageImg.src = pages[currentPage];
+  }
+});
+
     });
   </script>
 </body>
