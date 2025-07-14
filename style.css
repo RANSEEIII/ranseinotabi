@@ -14,6 +14,16 @@ html, body {
   z-index: 0;
 }
 
+#tent-click-area {
+    position: absolute;
+    top: 70%; 
+    left: 85%; 
+    width: 50px; 
+    height: 80px; 
+    cursor: pointer;
+    z-index: 5;
+}
+
 #journal {
   position: absolute;
   bottom: -20%;
@@ -116,7 +126,7 @@ html, body {
   height: 100%;
   cursor: pointer;
   z-index: 4;
-  pointer-events: auto; /* Keep clickable, but polaroids will sit above */
+  pointer-events: auto; 
 }
 
 
