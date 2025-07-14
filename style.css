@@ -18,8 +18,8 @@ html, body {
     position: absolute;
     top: 82%;   /* Moves it lower */
     left: 88%;  /* Moves it further right */
-    width: 70px;  /* Wider area */
-    height: 100px; /* Taller area */
+    width: 100px;  /* Wider area */
+    height: 200px; /* Taller area */
     display: block;
     cursor: pointer;
     z-index: 5;
