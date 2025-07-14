@@ -16,13 +16,13 @@ html, body {
 
 #tent-click-area {
     position: absolute;
-    top: 70%; 
-    left: 85%; 
-    width: 50px; 
-    height: 80px; 
+    top: 82%;   /* Moves it lower */
+    left: 88%;  /* Moves it further right */
+    width: 70px;  /* Wider area */
+    height: 100px; /* Taller area */
+    display: block;
     cursor: pointer;
     z-index: 5;
-    display: block; 
 }
 
 #journal {
