@@ -24,6 +24,7 @@
   <a id="polaroid-link-4" href="https://www.youtube.com/watch?v=u9P0BVvSElo" target="_blank"></a>
   <a id="polaroid-link-5" href="https://www.youtube.com/watch?v=05zIDoXcKms" target="_blank"></a>
   <a id="polaroid-link-6" href="https://www.youtube.com/watch?v=CGHDsEyptyQ" target="_blank"></a>
+  <a id="polaroid-link-7" href="https://www.youtube.com/watch?v=E_93XqWBTxQ" target="_blank"></a>
 </div>
     
     <div id="nav-left"></div>
@@ -44,7 +45,7 @@
     const flipSound = document.getElementById('flip-sound');
     const bgSound = document.getElementById('bg-sound');
 
-    const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png', 'journal_3.png', 'journal_4.png', 'journal_5.png', 'journal_6.png'];
+    const pages = ['journal_open.png', 'journal_1.png', 'journal_2.png', 'journal_3.png', 'journal_4.png', 'journal_5.png', 'journal_6.png', 'journal_7.png'];
     let currentPage = 0;
 
     journal.addEventListener('click', () => {
@@ -69,6 +70,7 @@ function flipToPage(index) {
     const link4 = document.getElementById('polaroid-link-4');
     const link5 = document.getElementById('polaroid-link-5');
     const link6 = document.getElementById('polaroid-link-6');
+    const link6 = document.getElementById('polaroid-link-7');
 
     link1.style.display = 'none';
     link2.style.display = 'none';
@@ -87,7 +89,9 @@ function flipToPage(index) {
     } else if (currentPage === 5) {
       link5.style.display = 'block'
     } else if (currentPage === 6) {
-      link6.style.display = 'block';
+      link6.style.display = 'block' 
+    } else if (currentPage === 7) {
+      link7.style.display = 'block';
     }
   }
 }
@@ -123,3 +127,4 @@ document.addEventListener('click', (e) => {
   </script>
 </body>
 </html>
+
