@@ -64,7 +64,8 @@ html, body {
 #polaroid-link-3,
 #polaroid-link-4,
 #polaroid-link-5,
-#polaroid-link-6 {
+#polaroid-link-6,
+#polaroid-link-7 {
   position: absolute;
   display: none;
   z-index: 6;
@@ -119,6 +120,13 @@ html, body {
   height: 30%;
 }
 
+#polaroid-link-7 {
+  top: 20%;
+  left: 65%;
+  width: 20%;
+  height: 30%;
+}
+
 #nav-left,
 #nav-right {
   position: absolute;
@@ -138,3 +146,4 @@ html, body {
 #nav-right {
   right: 0;
 }
+
